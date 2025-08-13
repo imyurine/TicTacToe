@@ -55,6 +55,18 @@ public class GameData : Singleton<GameData>
         SaveData();
     }
 
+    /// 初始化存档
+    public void InitData()
+    {
+        // 如果文件不存在，新建
+        if (!FileSystem.IsFileExists(filePath))
+        {
+            SaveData();
+        }
+
+        LoadData();
+    }
+
     /// 存档
     public void SaveData()
     {

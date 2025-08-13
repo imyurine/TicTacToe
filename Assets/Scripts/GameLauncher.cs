@@ -6,8 +6,8 @@ public class GameLauncher : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this);
-        // 加载存档
-        GameData.Instance.LoadData();
+        // 初始化存档
+        GameData.Instance.InitData();
     }
 
     private void Start()

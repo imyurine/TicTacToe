@@ -35,4 +35,10 @@ public class FileSystem
 
         return default(T);
     }
+
+    /// 文件是否存在
+    public static bool IsFileExists(string filePath)
+    {
+        return File.Exists(filePath);
+    }
 }
